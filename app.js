@@ -24,8 +24,10 @@ const server = http.createServer(async (req, res) => {
     const todos = await new bindate().getNextBindate();
     // set the status code, and content-type
     res.writeHead(200, {
-      "Content-Type": "application/jsonp",
-      "Access-Control-Allow-Origin": "http://localhost",
+      "Content-Type": "text/plain; charset=utf-8",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST",
+      "Access-Control-Allow-Credentials": true,
     });
 
     // send the data
