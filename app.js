@@ -24,7 +24,7 @@ const server = http.createServer(async (req, res) => {
     const todos = await new bindate().getNextBindate();
     // set the status code, and content-type
     res.writeHead(200, {
-      "Content-Type": "application/json",
+      "Content-Type": "application/jsonp",
       "Access-Control-Allow-Origin": "http://localhost",
     });
 
